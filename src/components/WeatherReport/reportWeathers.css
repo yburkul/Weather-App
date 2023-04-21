@@ -1,0 +1,23 @@
+.report-weather-card {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #43AFFC;
+}
+.report-card-body{
+  width: 28%;
+  height: 48%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.report-card-header{
+  font-size: 21px;
+  font-weight: 400;
+  color: #43AFFC;
+  font-family:'Times New Roman', Times, serif;
+  margin-top: 10px;
+  margin-left: 9px;
+}
