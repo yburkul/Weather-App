@@ -1,25 +1,17 @@
 .weather-card {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #43AFFC;
+  height: 100vh;
+  background: #43affc;
 }
-.card-body{
-  width: 25%;
-  height: 35%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.card-body {
+  width: 400px;
 }
-.card-header{
+.card-header {
   display: flex;
-  flex-direction: row;
-  text-align: center;
   font-size: 21px;
-  font-weight: 400;
-  color: #43AFFC;
-  font-family:'Times New Roman', Times, serif;
-  margin-top: 5px;
+  font-weight: 500;
+  color: #43affc;
+  align-items: center;
 }

@@ -18,6 +18,8 @@ function WeatherLoctionInput() {
     description: "",
     icon: "",
     country: "",
+    feelsLike:"",
+    humidity:""
   });
 
   const [errorMessage, setErrorMessage] = useState("");
@@ -31,7 +33,7 @@ function WeatherLoctionInput() {
         } else if (data?.data?.error?.code == "601") {
           setErrorMessage("Please enter a City Name");
         } else if (data?.data?.error?.code == "105") {
-          setErrorMessage("Internal Server error");
+          setErrorMessage("Internal Server Error");
         } else {
           setWeatherData({
             temperature: data?.data?.current?.temperature,
@@ -39,6 +41,8 @@ function WeatherLoctionInput() {
             description: data?.data?.current?.weather_descriptions[0],
             icon: data?.data?.current?.weather_icons[0],
             country: data?.data?.location?.country,
+            feelsLike:data?.data?.current?.feelslike,
+            humidity:data?.data?.current?.humidity,
           });
         }
       })
@@ -64,6 +68,8 @@ function WeatherLoctionInput() {
                 country: data?.data?.location?.country,
                 description: data?.data?.current?.weather_descriptions[0],
                 icon: data?.data?.current?.weather_icons[0],
+                feelsLike:data?.data?.current?.feelslike,
+                humidity:data?.data?.current?.humidity,
               });
             }
           })
@@ -79,9 +85,8 @@ function WeatherLoctionInput() {
     <>
       <div className="weather-card">
         {!weatherData.city ? (
-          <div className="card-body">
             <Box component="form" onSubmit={handleSubmit}>
-              <Card>
+              <Card className="card-body">
                 <Stack className="card-header" direction="row">
                   <CardHeader title="Weather App" />
                 </Stack>
@@ -114,7 +119,6 @@ function WeatherLoctionInput() {
                 </CardContent>
               </Card>
             </Box>
-          </div>
         ) : (
           <WeatherReportDetails
             weatherData={weatherData}

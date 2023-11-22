@@ -1,23 +1,48 @@
 .report-weather-card {
-  width: 100vw;
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #43AFFC;
+  height: 100vh;
+  background: #43affc;
 }
 .report-card-body{
-  width: 28%;
-  height: 48%;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  width: 400px;
 }
 .report-card-header{
+  display: flex;
   font-size: 21px;
-  font-weight: 400;
-  color: #43AFFC;
-  font-family:'Times New Roman', Times, serif;
-  margin-top: 10px;
+  font-weight: 500;
+  color: #43affc;
+  align-items: center;
   margin-left: 9px;
+}
+.feelslike-humidity-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.feel-main-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+.feelslike-box{
+  display: flex;
+  flex-direction: column;
+  margin: 4px;
+}
+.humidity-main-box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 10px;
+}
+.humidity-box{
+  display: flex;
+  flex-direction: column;
+  margin: 4px; 
 }

@@ -5,8 +5,9 @@ import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
-
-import { Divider, IconButton, Stack, Typography } from "@mui/material";
+import HumidityIcon from "../Assrets/humidity.png";
+import feelsLikeIcon from "../Assrets/feelsLike.png";
+import { Divider, IconButton, Stack, Typography, Box } from "@mui/material";
 
 function WeatherReportDetails({
   weatherData,
@@ -14,14 +15,15 @@ function WeatherReportDetails({
   setInputText,
   setErrorMessage,
 }) {
-  const { icon, country, temperature, city, description } = weatherData;
+  const { icon, country, temperature, city, description, feelsLike, humidity } =
+    weatherData;
   const backToHome = () => {
     setWeatherData("");
     setInputText("");
     setErrorMessage("");
   };
   return (
-    <div className="report-weather-card">
+    <Box className="report-weather-card">
       <Card className="report-card-body">
         <Stack
           className="report-card-header"
@@ -58,8 +60,26 @@ function WeatherReportDetails({
             </Stack>
           </Stack>
         </CardContent>
+        <Divider />
+        <Box className="feelslike-humidity-box">
+          <Box className="feel-main-box">
+            <img src={feelsLikeIcon} width="60" height="60" alt="geels like" />
+            <Box className="feelslike-box">
+              <Typography variant="h6">{feelsLike} °C</Typography>
+              <Typography variant="h6">Feels Like</Typography>
+            </Box>
+          </Box>
+          <Divider orientation="vertical" flexItem variant="fullWidth" />
+          <Box className="humidity-main-box">
+            <img src={HumidityIcon} width="60" height="55" alt="humidity" />
+            <Box className="humidity-box">
+              <Typography variant="h6">{humidity} %</Typography>
+              <Typography variant="h6">Humidity</Typography>
+            </Box>
+          </Box>
+        </Box>
       </Card>
-    </div>
+    </Box>
   );
 }
 

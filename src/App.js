@@ -1,5 +1,5 @@
-import './App.css';
-import WeatherLoctionInput from './components/WeatherLocation/WeatherLoctionInput';
+import "./App.css";
+import WeatherLoctionInput from "./components/WeatherLocation/WeatherLoctionInput";
 
 function App() {
   return (
