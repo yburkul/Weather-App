@@ -5,10 +5,10 @@
   height: 100vh;
   background: #43affc;
 }
-.report-card-body{
+.report-card-body {
   width: 400px;
 }
-.report-card-header{
+.report-card-header {
   display: flex;
   font-size: 21px;
   font-weight: 500;
@@ -16,33 +16,33 @@
   align-items: center;
   margin-left: 9px;
 }
-.feelslike-humidity-box{
+.feelslike-humidity-box {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
 }
-.feel-main-box{
+.feel-main-box {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 10px;
 }
-.feelslike-box{
+.feelslike-box {
   display: flex;
   flex-direction: column;
   margin: 4px;
 }
-.humidity-main-box{
+.humidity-main-box {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 10px;
 }
-.humidity-box{
+.humidity-box {
   display: flex;
   flex-direction: column;
-  margin: 4px; 
+  margin: 4px;
 }
